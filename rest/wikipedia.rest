@@ -1,0 +1,37 @@
+### Query
+GET https://en.wikipedia.org/w/api.php
+?action=query
+&origin=*
+&format=json
+&prop=info
+&generator=search
+&gsrnamespace=0
+&gsrlimit=5
+&gsrsearch=New_England_Patriots
+
+### Query with created_at
+https://en.wikipedia.org/w/api.php
+?action=query
+&origin=*
+&format=json
+&prop=revisions|info|extracts|exintro
+&rvlimit=1
+&rvprop=timestamp
+&rvdir=newer
+&titles=United States presidential election, 2016
+
+### help query
+GET https://en.wikipedia.org/w/api.php?action=help&modules=query
+
+### Query by date range
+https://en.wikipedia.org/w/api.php
+?action=query
+&origin=*
+&format=json
+&prop=revisions
+&generator=allpages
+&rvprop=timestamp
+
+### Get recent changes
+## REF: https://www.mediawiki.org/wiki/API:RecentChanges
+GET https://en.wikipedia.org/w/api.php?action=query&list=recentchanges
